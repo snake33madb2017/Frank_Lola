@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout title="Videos & Media | Frank Lola">
+    <Header />
+    <main class="pt-32 pb-24 px-6 bg-zinc-950 min-h-screen">
+        <div class="max-w-6xl mx-auto animate-fade-in-up">
+            <h1 class="text-5xl font-serif font-bold text-white mb-6">Contenido <span class="italic text-gold">Multimedia</span></h1>
+            <p class="text-xl text-zinc-400 font-light mb-16">Entrevistas, masterclasses y fragmentos de conferencias.</p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Placeholder Video 1 -->
+                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 group cursor-pointer hover:border-gold/50 transition-colors">
+                    <div class="aspect-video relative">
+                        <img src="https://images.unsplash.com/photo-1517456793572-1d8efd6dc135?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" alt="Video Thumbnail" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-gold/90 text-zinc-950 flex items-center justify-center font-bold text-2xl pl-1 group-hover:scale-110 transition-transform">▶</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-gold transition-colors">Entrevista: El rol del Bartender Moderno</h3>
+                        <p class="text-zinc-400 text-sm font-light">Discusión sobre el liderazgo detrás de la barra y la cultura de equipo.</p>
+                    </div>
+                </div>
+                
+                <!-- Placeholder Video 2 -->
+                <div class="bg-zinc-900 rounded-xl overflow-hidden border border-zinc-800 group cursor-pointer hover:border-gold/50 transition-colors">
+                    <div class="aspect-video relative">
+                        <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" alt="Video Thumbnail" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-gold/90 text-zinc-950 flex items-center justify-center font-bold text-2xl pl-1 group-hover:scale-110 transition-transform">▶</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-gold transition-colors">Masterclass: Truly Hospitality</h3>
+                        <p class="text-zinc-400 text-sm font-light">Cómo alinear a los directivos para crear una experiencia de servicio coherente y auténtica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>

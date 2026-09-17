@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout title="Educación & Coaching | Frank Lola">
+    <Header />
+    <main class="pt-32 pb-24 px-6 bg-zinc-950 min-h-screen">
+        <div class="max-w-4xl mx-auto animate-fade-in-up">
+            <h1 class="text-5xl font-serif font-bold text-white mb-6">Educación & <span class="italic text-gold">Coaching</span></h1>
+            <p class="text-xl text-zinc-400 font-light mb-16">Metodologías certificadas (EMCC e ICF) diseñadas para transformar líderes y potenciar equipos en la industria de la hospitalidad.</p>
+
+            <div class="space-y-12">
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-xl hover:border-gold/50 transition-colors">
+                    <h3 class="text-2xl font-bold text-white mb-4">Coaching Ejecutivo</h3>
+                    <p class="text-zinc-400 leading-relaxed mb-6 text-lg font-light">Acompañamiento personalizado para directivos que buscan alinear su propósito con los objetivos del negocio, mejorando la toma de decisiones y la gestión emocional.</p>
+                    <span class="text-xs uppercase tracking-widest text-gold font-bold">Certificación ICF / EMCC</span>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 p-8 rounded-xl hover:border-gold/50 transition-colors">
+                    <h3 class="text-2xl font-bold text-white mb-4">Transformación Cultural & Mentoring</h3>
+                    <p class="text-zinc-400 leading-relaxed mb-6 text-lg font-light">Programas diseñados para redefinir el ADN de tu equipo, convirtiendo la hospitalidad en una ventaja estratégica medible y sostenible a largo plazo.</p>
+                    <span class="text-xs uppercase tracking-widest text-gold font-bold">Talleres & Mentoring para Comités Directivos</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>

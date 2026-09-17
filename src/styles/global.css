@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+    --font-display: 'Montserrat', sans-serif;
+    --font-sans: 'Inter', sans-serif;
+    --color-accent: #FF3366; /* Un color vibrante y atrevido para los detalles */
+}
+
+@layer utilities {
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

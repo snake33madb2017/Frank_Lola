@@ -9,9 +9,9 @@ import Footer from '../components/Footer.astro';
     <main>
         <!-- Hero Section -->
         <section class="relative h-screen flex flex-col justify-center px-6 md:px-12">
-            <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2070" alt="Hospitality Background" class="w-full h-full object-cover opacity-20 grayscale" />
-                <div class="absolute inset-0 bg-zinc-950/40"></div>
+            <div class="absolute inset-0 z-0 overflow-hidden">
+                <img src="/frank-lola-scaled.jpg" alt="Frank Lola Hospitality Background" class="w-full h-full object-cover opacity-30 grayscale hover:scale-105 transition-transform duration-[20s] ease-out" />
+                <div class="absolute inset-0 bg-zinc-950/60 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
             </div>
             
             <div class="relative z-10 max-w-7xl w-full mx-auto animate-fade-in-up mt-20">
@@ -37,8 +37,11 @@ import Footer from '../components/Footer.astro';
         <section class="py-32 px-6 bg-zinc-950 border-t border-zinc-900">
             <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                 <div class="order-2 md:order-1 relative group">
-                    <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&q=80&w=1000" alt="Frank Lola Portrait Placeholder" class="w-full grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl" />
-                    <div class="absolute -bottom-10 -right-6 md:-right-10 bg-accent text-white p-8 shadow-2xl">
+                    <div class="overflow-hidden shadow-2xl relative">
+                        <img src="/xfm-frank-lola-01-1.jpg" alt="Frank Lola Portrait" class="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" />
+                        <div class="absolute inset-0 border-2 border-transparent group-hover:border-accent/50 transition-colors duration-1000"></div>
+                    </div>
+                    <div class="absolute -bottom-10 -right-6 md:-right-10 bg-accent text-white p-8 shadow-2xl group-hover:-translate-y-2 transition-transform duration-700">
                         <p class="text-6xl font-display font-black leading-none">20+</p>
                         <p class="text-sm font-bold uppercase tracking-widest mt-2">Años Exp</p>
                     </div>

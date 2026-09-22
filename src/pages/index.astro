@@ -8,59 +8,94 @@ import Footer from '../components/Footer.astro';
     <Header />
     <main>
         <!-- Hero Section -->
-        <section class="relative min-h-screen pt-32 pb-20 px-6 md:px-12 flex items-center bg-zinc-950">
-            <div class="max-w-7xl w-full mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <section class="relative min-h-screen pt-24 px-6 md:px-12 flex items-center justify-center bg-navy overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="/foto1-placeholder.jpg" alt="Frank Lola Speaking" class="w-full h-full object-cover opacity-50 mix-blend-overlay" />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy pointer-events-none"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-5xl mx-auto text-center mt-20">
+                <h1 class="text-7xl md:text-9xl font-display font-black text-white leading-none tracking-tighter uppercase mb-2">
+                    Frank Lola.
+                </h1>
+                <h2 class="text-gold font-display font-bold tracking-widest uppercase mb-8 text-sm md:text-base">
+                    Hospitality / Mentor-Coach / Speaker
+                </h2>
                 
-                <!-- Text Content -->
-                <div class="order-2 md:order-1 relative z-10 animate-fade-in-up">
-                    <h2 class="text-accent font-display font-bold tracking-widest uppercase mb-4 text-sm md:text-base">Hospitality / Liderazgo / Cultura</h2>
-                    <h1 class="text-7xl md:text-9xl font-display font-black text-white leading-none tracking-tighter uppercase mb-6 drop-shadow-2xl">
-                        Frank<br/>Lola.
-                    </h1>
-                    
-                    <!-- Animated Typewriter Paragraph -->
-                    <p class="text-xl md:text-3xl text-zinc-200 mb-12 max-w-2xl font-display font-bold uppercase leading-snug h-[4rem] md:h-[6rem]">
-                        Convierte la hospitalidad genuina en <br class="hidden md:block" />
-                        <span id="dynamic-text" class="text-accent"></span><span class="animate-pulse text-accent">|</span>
-                    </p>
+                <p class="text-lg md:text-xl text-text-main/90 mb-12 max-w-4xl mx-auto font-sans font-light uppercase leading-relaxed">
+                    "I deeply believe that hospitality isn't a privilege, but a global necessity. This belief guides how I live and fuels my pursuit of truly hospitality. I'm grateful for every moment of my life, good and bad, because they've made me who I am today. As long as I'm here, I want to show the world how a truly hospitality can eradicate hostility."
+                </p>
 
-                    <div class="flex flex-col sm:flex-row gap-6">
-                        <a href="#contacto" class="bg-white text-zinc-950 px-10 py-5 font-display font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition-all text-center inline-block">Contáctame</a>
-                    </div>
+                <a href="/about" class="bg-transparent border-2 border-gold text-gold px-10 py-4 rounded-full font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-all inline-block">
+                    Learn More
+                </a>
+            </div>
+            
+            <!-- Carousel placeholder at bottom of hero -->
+            <div class="absolute bottom-0 left-0 w-full bg-surface border-t border-border-gold py-4 overflow-hidden z-20">
+                <div class="flex gap-12 whitespace-nowrap animate-pulse opacity-70 items-center justify-center">
+                    <span class="text-text-main font-bold uppercase tracking-widest">Four Roses</span>
+                    <span class="text-text-main font-bold uppercase tracking-widest">Havana Club</span>
+                    <span class="text-text-main font-bold uppercase tracking-widest">Beefeater</span>
+                    <span class="text-text-main font-bold uppercase tracking-widest">Absolut</span>
+                    <span class="text-text-main font-bold uppercase tracking-widest">Tatel Group</span>
                 </div>
-
-                <!-- Image -->
-                <div class="order-1 md:order-2 relative z-10 animate-fade-in-up flex justify-center md:justify-end">
-                    <div class="relative w-full max-w-xl">
-                        <img src="/frank-lola-scaled.jpg" alt="Frank Lola Hero" class="w-full h-auto object-contain shadow-2xl grayscale hover:grayscale-0 active:grayscale-0 transition-all duration-1000" />
-                        <!-- Elemento decorativo moderno -->
-                        <div class="absolute -inset-4 border border-zinc-800 -z-10 hidden md:block"></div>
-                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/40 to-transparent pointer-events-none"></div>
-                    </div>
-                </div>
-                
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="py-32 px-6 bg-zinc-950 border-t border-zinc-900">
-            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1 relative group">
-                    <div class="overflow-hidden shadow-2xl relative">
-                        <img src="/xfm-frank-lola-01-1.jpg" alt="Frank Lola Portrait" class="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 group-active:grayscale-0 transition-all duration-1000" />
-                        <div class="absolute inset-0 border-2 border-transparent group-hover:border-accent/50 transition-colors duration-1000"></div>
-                    </div>
-                    <div class="absolute -bottom-10 -right-6 md:-right-10 bg-accent text-white p-8 shadow-2xl group-hover:-translate-y-2 transition-transform duration-700">
-                        <p class="text-6xl font-display font-black leading-none">20+</p>
-                        <p class="text-sm font-bold uppercase tracking-widest mt-2">Años Exp</p>
-                    </div>
+        <!-- Frank Lola Section (About Short) -->
+        <section class="py-32 px-6 bg-navy relative">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-5xl md:text-7xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Frank Lola</h2>
+                <h3 class="text-gold font-bold uppercase tracking-widest mb-8">Consultor. Speaker. Coach.</h3>
+                <p class="text-text-main/80 text-xl font-light max-w-3xl mx-auto">
+                    A brief introduction about Frank Lola, mirroring the style of the Prince EA "Filmmaker. Speaker. Researcher" section.
+                </p>
+                <div class="mt-12">
+                     <a href="/about" class="bg-transparent border border-gold text-text-main px-8 py-3 rounded-full font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-colors">
+                        Learn More &gt;
+                    </a>
                 </div>
-                <div class="order-1 md:order-2">
-                    <h2 class="text-5xl md:text-7xl font-display font-black text-white mb-8 tracking-tighter uppercase leading-none">Alineando Personas & Propósito.</h2>
-                    <div class="text-zinc-400 space-y-6 text-xl font-light">
-                        <p>Acompaño a directivos y equipos en la transformación del liderazgo y la experiencia de servicio.</p>
-                        <p>Fundador de <strong class="text-white">Bar(o)Grama</strong> y <strong class="text-white">Truly Hospitality</strong>, cofundador de <strong class="text-white">Lovo Bar</strong> y <strong class="text-white">The Flow Bros</strong>.</p>
-                        <p class="font-display font-bold text-white text-2xl uppercase pt-4 border-t border-zinc-800">Coaching ejecutivo (EMCC/ICF) con visión de primera línea.</p>
+            </div>
+        </section>
+
+        <!-- Banner 3 Photos Top -->
+        <section class="py-10 bg-navy">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-6">
+                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                    <span class="text-gold uppercase tracking-widest">Photo 1 Placeholder</span>
+                </div>
+                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                    <span class="text-gold uppercase tracking-widest">Photo 2 Placeholder</span>
+                </div>
+                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                    <span class="text-gold uppercase tracking-widest">Photo 3 Placeholder</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- What People Says -->
+        <section class="py-32 px-6 bg-navy border-t border-border-gold">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-display font-black text-center text-text-main mb-16 tracking-tighter uppercase">What People Say</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Testimonials placeholders -->
+                    <div class="bg-surface p-8 rounded border border-border-gold">
+                        <p class="text-text-main/80 italic mb-4">"A great professional..."</p>
+                        <p class="text-gold font-bold uppercase">- Pau Gasol</p>
+                    </div>
+                    <div class="bg-surface p-8 rounded border border-border-gold">
+                        <p class="text-text-main/80 italic mb-4">"Excellent leadership coach..."</p>
+                        <p class="text-gold font-bold uppercase">- Minerva Tapial</p>
+                    </div>
+                    <div class="bg-surface p-8 rounded border border-border-gold">
+                        <p class="text-text-main/80 italic mb-4">"Transformed our hospitality vision."</p>
+                        <p class="text-gold font-bold uppercase">- Desmond Payne</p>
+                    </div>
+                    <div class="bg-surface p-8 rounded border border-border-gold">
+                        <p class="text-text-main/80 italic mb-4">"Amazing results."</p>
+                        <p class="text-gold font-bold uppercase">- CR7</p>
                     </div>
                 </div>
             </div>
@@ -68,48 +103,3 @@ import Footer from '../components/Footer.astro';
     </main>
     <Footer />
 </Layout>
-
-<script>
-    // Script de efecto máquina de escribir dinámica
-    const words = [
-        "tu ventaja estratégica.", 
-        "el adn de tu equipo.", 
-        "tu mejor experiencia.", 
-        "tu motor de ventas."
-    ];
-    let i = 0;
-    const el = document.getElementById('dynamic-text');
-
-    if (el) {
-        function typingEffect() {
-            let word = words[i].split("");
-            const loopTyping = function() {
-                if (word.length > 0) {
-                    el.innerHTML += word.shift();
-                    setTimeout(loopTyping, 70);
-                } else {
-                    setTimeout(deletingEffect, 2500);
-                }
-            };
-            loopTyping();
-        }
-
-        function deletingEffect() {
-            let word = el.innerHTML;
-            const loopDeleting = function() {
-                if (word.length > 0) {
-                    word = word.substring(0, word.length - 1);
-                    el.innerHTML = word;
-                    setTimeout(loopDeleting, 30);
-                } else {
-                    i = (i + 1) % words.length;
-                    setTimeout(typingEffect, 500);
-                }
-            };
-            loopDeleting();
-        }
-
-        // Iniciar el efecto después de 1 segundo
-        setTimeout(typingEffect, 1000);
-    }
-</script>

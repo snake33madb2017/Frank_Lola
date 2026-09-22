@@ -3,7 +3,11 @@
 @theme {
     --font-display: 'Montserrat', sans-serif;
     --font-sans: 'Inter', sans-serif;
-    --color-accent: #FF3366; /* Un color vibrante y atrevido para los detalles */
+    --color-navy: #081933;
+    --color-gold: #d3a548;
+    --color-surface: rgba(8, 25, 51, 0.7);
+    --color-text-main: #ffffff;
+    --color-border-gold: rgba(211, 165, 72, 0.2);
 }
 
 @layer utilities {

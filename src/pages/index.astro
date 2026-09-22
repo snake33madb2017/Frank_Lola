@@ -55,23 +55,44 @@ import Footer from '../components/Footer.astro';
             </div>
         </section>
 
-        <!-- Banner 3 Photos Top -->
-        <section class="py-10 bg-navy">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-6">
-                <div class="group aspect-square bg-[url('/bartender_passion.jpg')] bg-cover bg-center border border-border-gold flex items-end justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden">
-                    <div class="w-full bg-navy/90 backdrop-blur-sm p-4 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <span class="text-gold uppercase tracking-widest font-bold text-sm block">Bartender by Passion</span>
+        <!-- 3 Caminos Section -->
+        <section class="py-24 px-6 bg-navy border-t border-border-gold">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-5xl md:text-7xl font-display font-black text-gold mb-20 tracking-tighter uppercase scroll-reveal reveal-hidden">3 Caminos</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start relative">
+                    
+                    <!-- Left: Consultant -->
+                    <div class="flex flex-col items-center px-4 scroll-reveal reveal-hidden">
+                        <h3 class="text-gold font-display font-bold text-2xl md:text-3xl tracking-widest uppercase mb-6">Consultant</h3>
+                        <p class="text-text-main text-xs md:text-sm font-sans tracking-widest leading-loose uppercase text-center max-w-xs">
+                            Ayudando a bares, marcas y empresas de hospitality a desarrollar conceptos, estrategias, barras y experiencias con sentido.
+                        </p>
                     </div>
-                </div>
-                <div class="group aspect-square bg-[url('/coach_mentor.jpg')] bg-cover bg-center border border-border-gold flex items-end justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden reveal-delay-100">
-                    <div class="w-full bg-navy/90 backdrop-blur-sm p-4 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <span class="text-gold uppercase tracking-widest font-bold text-sm block">Coach & Mentor by Purpose</span>
+
+                    <!-- Center: Coach Mentor -->
+                    <div class="flex flex-col items-center px-4 relative scroll-reveal reveal-hidden reveal-delay-100">
+                        <!-- Vertical Separators (Desktop only) -->
+                        <div class="hidden md:block absolute left-0 top-0 bottom-0 w-1 bg-gold h-full"></div>
+                        <div class="hidden md:block absolute right-0 top-0 bottom-0 w-1 bg-gold h-full"></div>
+                        
+                        <h3 class="text-gold font-display font-bold text-2xl md:text-3xl tracking-widest uppercase mb-6 flex flex-col gap-1">
+                            <span>Coach</span>
+                            <span>Mentor</span>
+                        </h3>
+                        <p class="text-text-main text-xs md:text-sm font-sans tracking-widest leading-loose uppercase text-center max-w-xs">
+                            Acompañando a profesionales y líderes en su desarrollo, propósito y liderazgo.
+                        </p>
                     </div>
-                </div>
-                <div class="group aspect-square bg-[url('/hospitality_strategy.jpg')] bg-cover bg-center border border-border-gold flex items-end justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden reveal-delay-200">
-                    <div class="w-full bg-navy/90 backdrop-blur-sm p-4 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                        <span class="text-gold uppercase tracking-widest font-bold text-sm block">Strategist by Experience</span>
+
+                    <!-- Right: Speaker -->
+                    <div class="flex flex-col items-center px-4 scroll-reveal reveal-hidden reveal-delay-200">
+                        <h3 class="text-gold font-display font-bold text-2xl md:text-3xl tracking-widest uppercase mb-6">Speaker</h3>
+                        <p class="text-text-main text-xs md:text-sm font-sans tracking-widest leading-loose uppercase text-center max-w-xs">
+                            Compartiendo historias, conocimiento y una visión de la hospitality construida desde la experiencia y la curiosidad.
+                        </p>
                     </div>
+
                 </div>
             </div>
         </section>

@@ -8,26 +8,24 @@ import Footer from '../components/Footer.astro';
     <Header />
     <main>
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen pt-24 px-6 md:px-12 flex items-center justify-center bg-navy overflow-hidden">
-            <!-- Background Image -->
-            <div class="absolute inset-0 z-0">
-                <img src="/foto1-placeholder.jpg" alt="Frank Lola Speaking" class="w-full h-full object-cover opacity-50 mix-blend-overlay" />
-                <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy pointer-events-none"></div>
-            </div>
+        <section id="home" class="relative min-h-screen pt-24 px-6 md:px-12 flex items-center justify-center overflow-hidden bg-[url('/frank-lola-scaled.jpg')] bg-fixed bg-cover bg-center">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-navy/60 mix-blend-multiply z-0"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/30 pointer-events-none z-0"></div>
             
-            <div class="relative z-10 max-w-5xl mx-auto text-center mt-20">
-                <h1 class="text-7xl md:text-9xl font-display font-black text-white leading-none tracking-tighter uppercase mb-2">
+            <div class="relative z-10 max-w-5xl mx-auto text-center mt-20 scroll-reveal reveal-hidden">
+                <h1 class="text-7xl md:text-9xl font-display font-black text-white leading-none tracking-tighter uppercase mb-2 drop-shadow-2xl">
                     Frank Lola.
                 </h1>
-                <h2 class="text-gold font-display font-bold tracking-widest uppercase mb-8 text-sm md:text-base">
+                <h2 class="text-gold font-display font-bold tracking-widest uppercase mb-8 text-sm md:text-base scroll-reveal reveal-hidden reveal-delay-100">
                     Hospitality / Mentor-Coach / Speaker
                 </h2>
                 
-                <p class="text-lg md:text-xl text-text-main/90 mb-12 max-w-4xl mx-auto font-sans font-light uppercase leading-relaxed">
+                <p class="text-lg md:text-xl text-text-main/90 mb-12 max-w-4xl mx-auto font-sans font-light uppercase leading-relaxed scroll-reveal reveal-hidden reveal-delay-200">
                     "Creo profundamente que la hospitalidad no es un privilegio, sino una necesidad global. Esta creencia guía cómo vivo y alimenta mi búsqueda de la verdadera hospitalidad. Estoy agradecido por cada momento de mi vida, bueno y malo, porque me han convertido en quien soy hoy. Mientras esté aquí, quiero mostrarle al mundo cómo una verdadera hospitalidad puede erradicar la hostilidad."
                 </p>
 
-                <a href="#about" class="bg-transparent border-2 border-gold text-gold px-10 py-4 rounded-full font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-all inline-block">
+                <a href="#about" class="bg-transparent border-2 border-gold text-gold px-10 py-4 rounded-full font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-all inline-block scroll-reveal reveal-hidden reveal-delay-300">
                     Saber Más
                 </a>
             </div>
@@ -35,21 +33,21 @@ import Footer from '../components/Footer.astro';
             <!-- Carousel placeholder at bottom of hero -->
             <div class="absolute bottom-0 left-0 w-full bg-surface border-t border-border-gold py-4 overflow-hidden z-20">
                 <div class="flex gap-12 whitespace-nowrap animate-pulse opacity-70 items-center justify-center">
-                    <span class="text-text-main font-bold uppercase tracking-widest">Four Roses</span>
-                    <span class="text-text-main font-bold uppercase tracking-widest">Havana Club</span>
-                    <span class="text-text-main font-bold uppercase tracking-widest">Beefeater</span>
-                    <span class="text-text-main font-bold uppercase tracking-widest">Absolut</span>
-                    <span class="text-text-main font-bold uppercase tracking-widest">Tatel Group</span>
+                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Four Roses</span>
+                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Havana Club</span>
+                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Beefeater</span>
+                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Absolut</span>
+                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Tatel Group</span>
                 </div>
             </div>
         </section>
 
         <!-- Frank Lola Section (About) -->
         <section id="about" class="py-32 px-6 bg-navy relative">
-            <div class="max-w-7xl mx-auto text-center">
+            <div class="max-w-7xl mx-auto text-center scroll-reveal reveal-hidden">
                 <h2 class="text-5xl md:text-7xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Frank Lola</h2>
-                <h3 class="text-gold font-bold uppercase tracking-widest mb-8">Consultor. Speaker. Coach.</h3>
-                <p class="text-text-main/80 text-xl font-light max-w-3xl mx-auto leading-relaxed">
+                <h3 class="text-gold font-bold uppercase tracking-widest mb-8 scroll-reveal reveal-hidden reveal-delay-100">Consultor. Speaker. Coach.</h3>
+                <p class="text-text-main/80 text-xl font-light max-w-3xl mx-auto leading-relaxed scroll-reveal reveal-hidden reveal-delay-200">
                     Acompaño a directivos y equipos en la transformación del liderazgo y la experiencia de servicio. Fundador de <strong>Bar(o)Grama</strong> y <strong>Truly Hospitality</strong>, cofundador de <strong>Lovo Bar</strong> y <strong>The Flow Bros</strong>. Coaching ejecutivo (EMCC/ICF) con visión de primera línea.
                 </p>
             </div>
@@ -58,14 +56,14 @@ import Footer from '../components/Footer.astro';
         <!-- Banner 3 Photos Top -->
         <section class="py-10 bg-navy">
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-6">
-                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
-                    <span class="text-gold uppercase tracking-widest">Foto 1 Placeholder</span>
+                <div class="aspect-square bg-[url('/xfm-frank-lola-01-1.jpg')] bg-cover bg-center border border-border-gold flex items-center justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden">
+                    <span class="text-gold uppercase tracking-widest font-bold bg-navy/80 px-4 py-2 backdrop-blur-sm">Foto 1 Placeholder</span>
                 </div>
-                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
-                    <span class="text-gold uppercase tracking-widest">Foto 2 Placeholder</span>
+                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden reveal-delay-100">
+                    <span class="text-gold uppercase tracking-widest font-bold">Foto 2 Placeholder</span>
                 </div>
-                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
-                    <span class="text-gold uppercase tracking-widest">Foto 3 Placeholder</span>
+                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden reveal-delay-200">
+                    <span class="text-gold uppercase tracking-widest font-bold">Foto 3 Placeholder</span>
                 </div>
             </div>
         </section>
@@ -73,22 +71,22 @@ import Footer from '../components/Footer.astro';
         <!-- What People Says -->
         <section class="py-32 px-6 bg-navy border-t border-border-gold">
             <div class="max-w-7xl mx-auto">
-                <h2 class="text-4xl md:text-6xl font-display font-black text-center text-text-main mb-16 tracking-tighter uppercase">Lo Que Dice La Gente</h2>
+                <h2 class="text-4xl md:text-6xl font-display font-black text-center text-text-main mb-16 tracking-tighter uppercase scroll-reveal reveal-hidden">Lo Que Dice La Gente</h2>
                 <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Testimonials placeholders -->
-                    <div class="bg-surface p-8 rounded border border-border-gold">
+                    <!-- Testimonials -->
+                    <div class="bg-surface p-8 rounded border border-border-gold hover:border-gold transition-colors scroll-reveal reveal-hidden">
                         <p class="text-text-main/80 italic mb-4">"Un gran profesional..."</p>
                         <p class="text-gold font-bold uppercase">- Pau Gasol</p>
                     </div>
-                    <div class="bg-surface p-8 rounded border border-border-gold">
+                    <div class="bg-surface p-8 rounded border border-border-gold hover:border-gold transition-colors scroll-reveal reveal-hidden reveal-delay-100">
                         <p class="text-text-main/80 italic mb-4">"Excelente coach de liderazgo..."</p>
                         <p class="text-gold font-bold uppercase">- Minerva Tapial</p>
                     </div>
-                    <div class="bg-surface p-8 rounded border border-border-gold">
+                    <div class="bg-surface p-8 rounded border border-border-gold hover:border-gold transition-colors scroll-reveal reveal-hidden reveal-delay-200">
                         <p class="text-text-main/80 italic mb-4">"Transformó nuestra visión de hospitalidad."</p>
                         <p class="text-gold font-bold uppercase">- Desmond Payne</p>
                     </div>
-                    <div class="bg-surface p-8 rounded border border-border-gold">
+                    <div class="bg-surface p-8 rounded border border-border-gold hover:border-gold transition-colors scroll-reveal reveal-hidden reveal-delay-300">
                         <p class="text-text-main/80 italic mb-4">"Resultados increíbles."</p>
                         <p class="text-gold font-bold uppercase">- CR7</p>
                     </div>
@@ -98,7 +96,7 @@ import Footer from '../components/Footer.astro';
 
         <!-- Placeholder for TH-Blog -->
         <section id="blog" class="py-32 px-6 bg-navy relative border-t border-border-gold">
-            <div class="max-w-7xl mx-auto text-center">
+            <div class="max-w-7xl mx-auto text-center scroll-reveal reveal-hidden">
                 <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Blog</h2>
                 <p class="text-gold font-bold uppercase tracking-widest mb-8">Artículos y reflexiones</p>
                 <div class="h-64 bg-surface border border-border-gold flex items-center justify-center opacity-70">
@@ -109,7 +107,7 @@ import Footer from '../components/Footer.astro';
 
         <!-- Placeholder for Videos -->
         <section id="videos" class="py-32 px-6 bg-navy relative border-t border-border-gold">
-            <div class="max-w-7xl mx-auto text-center">
+            <div class="max-w-7xl mx-auto text-center scroll-reveal reveal-hidden">
                 <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Videos</h2>
                 <p class="text-gold font-bold uppercase tracking-widest mb-8">Canal de YouTube</p>
                 <div class="h-64 bg-surface border border-border-gold flex items-center justify-center opacity-70">
@@ -120,7 +118,7 @@ import Footer from '../components/Footer.astro';
 
         <!-- Placeholder for Bar(o)Grama -->
         <section id="barograma" class="py-32 px-6 bg-navy relative border-t border-border-gold">
-            <div class="max-w-7xl mx-auto text-center">
+            <div class="max-w-7xl mx-auto text-center scroll-reveal reveal-hidden">
                 <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Bar(O)Grama</h2>
                 <p class="text-gold font-bold uppercase tracking-widest mb-8">Consultoría</p>
                 <div class="h-64 bg-surface border border-border-gold flex items-center justify-center opacity-70">
@@ -132,3 +130,20 @@ import Footer from '../components/Footer.astro';
     </main>
     <Footer />
 </Layout>
+
+<script>
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-active');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    });
+
+    const hiddenElements = document.querySelectorAll('.reveal-hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>

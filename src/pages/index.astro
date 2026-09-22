@@ -47,18 +47,40 @@ import Footer from '../components/Footer.astro';
         </section>
 
         <!-- Frank Lola Section (About) -->
-        <section id="about" class="py-32 px-6 bg-navy relative border-t border-border-gold">
-            <div class="max-w-7xl mx-auto text-center scroll-reveal reveal-hidden">
-                <h2 class="text-5xl md:text-7xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Frank Lola</h2>
-                <h3 class="text-gold font-bold uppercase tracking-widest mb-8 scroll-reveal reveal-hidden reveal-delay-100">Hospitality / Mentor-Coach / Speaker</h3>
-                <p class="text-text-main/90 text-lg md:text-xl font-light max-w-4xl mx-auto leading-relaxed scroll-reveal reveal-hidden reveal-delay-200 uppercase">
-                    "I DEEPLY BELIEVE THAT HOSPITALITY ISN'T A PRIVILEGE, BUT A GLOBAL NECESSITY. THIS BELIEF GUIDES HOW I LIVE AND FUELS MY PURSUIT OF TRULY HOSPITALITY. I'M GRATEFUL FOR EVERY MOMENT OF MY LIFE, GOOD AND BAD, BECAUSE THEY'VE MADE ME WHO I AM TODAY. AS LONG AS I'M HERE, I WANT TO SHOW THE WORLD HOW A TRULY HOSPITALITY CAN ERADICATE HOSTILITY."
-                </p>
-                <div class="mt-12">
-                     <a href="#about" class="bg-transparent border-2 border-gold text-gold px-10 py-4 rounded-full font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-all inline-block scroll-reveal reveal-hidden reveal-delay-300">
+        <section id="about" class="py-32 px-6 bg-navy relative border-t border-border-gold overflow-hidden">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                
+                <!-- Image Side -->
+                <div class="w-full lg:w-1/2 relative scroll-reveal reveal-hidden">
+                    <!-- Marco decorativo desplazado -->
+                    <div class="absolute -inset-4 border border-gold/30 translate-x-4 translate-y-4 z-0 hidden lg:block"></div>
+                    <!-- Contenedor de la imagen -->
+                    <div class="relative z-10 overflow-hidden shadow-2xl shadow-black/50 border border-border-gold">
+                        <img src="/Sobre%20mi%20-%20Frank%20Lola.jpeg" alt="Frank Lola - Sobre mí" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-out scale-100 hover:scale-105" />
+                    </div>
+                </div>
+
+                <!-- Text Side -->
+                <div class="w-full lg:w-1/2 flex flex-col items-start text-left scroll-reveal reveal-hidden">
+                    <div class="mb-10 relative">
+                        <!-- Marca de agua decorativa -->
+                        <span class="absolute -left-12 -top-12 text-[10rem] text-white/5 font-display font-black leading-none pointer-events-none">01</span>
+                        <h2 class="text-6xl md:text-[5.5rem] font-display font-black text-white tracking-tighter uppercase leading-none mb-6 drop-shadow-md relative z-10">Frank Lola</h2>
+                        <h3 class="text-gold font-bold uppercase tracking-widest text-sm md:text-base border-l-2 border-gold pl-4 scroll-reveal reveal-hidden reveal-delay-100 relative z-10">Hospitality / Mentor-Coach / Speaker</h3>
+                    </div>
+                    
+                    <div class="relative scroll-reveal reveal-hidden reveal-delay-200 mb-12 pl-6 md:pl-10 border-l-2 border-white/10">
+                        <span class="absolute -top-6 -left-4 text-7xl text-gold/40 font-display italic leading-none pointer-events-none">"</span>
+                        <p class="text-white/90 text-lg md:text-xl font-sans tracking-widest leading-relaxed uppercase relative z-10">
+                            I DEEPLY BELIEVE THAT HOSPITALITY ISN'T A PRIVILEGE, BUT A GLOBAL NECESSITY. THIS BELIEF GUIDES HOW I LIVE AND FUELS MY PURSUIT OF TRULY HOSPITALITY. I'M GRATEFUL FOR EVERY MOMENT OF MY LIFE, GOOD AND BAD, BECAUSE THEY'VE MADE ME WHO I AM TODAY. AS LONG AS I'M HERE, I WANT TO SHOW THE WORLD HOW A TRULY HOSPITALITY CAN ERADICATE HOSTILITY.
+                        </p>
+                    </div>
+
+                    <a href="#about" class="bg-transparent border-2 border-gold text-gold px-10 py-4 rounded-full font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-all inline-block scroll-reveal reveal-hidden reveal-delay-300">
                         Saber Más
                     </a>
                 </div>
+
             </div>
         </section>
 

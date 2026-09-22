@@ -55,45 +55,65 @@ import Footer from '../components/Footer.astro';
             </div>
         </section>
 
-        <!-- 3 Caminos Section -->
-        <section class="py-24 px-6 bg-navy border-t border-border-gold">
-            <div class="max-w-7xl mx-auto text-center">
-                <h2 class="text-5xl md:text-7xl font-display font-black text-gold mb-20 tracking-tighter uppercase scroll-reveal reveal-hidden">3 Caminos</h2>
+        <!-- 3 Caminos Section (Dynamic Full Width) -->
+        <section class="py-24 bg-navy border-t border-border-gold overflow-hidden">
+            <div class="text-center mb-20 px-6">
+                <h2 class="text-5xl md:text-8xl font-display font-black bg-gradient-to-r from-gold via-yellow-200 to-gold bg-clip-text text-transparent tracking-tighter uppercase scroll-reveal reveal-hidden drop-shadow-2xl">
+                    3 Caminos
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 w-full border-y border-border-gold">
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start relative">
+                <!-- Left: Consultant -->
+                <div class="group relative px-8 py-24 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-border-gold overflow-hidden cursor-pointer scroll-reveal reveal-hidden min-h-[400px]">
+                    <!-- Hover Background Image -->
+                    <div class="absolute inset-0 bg-[url('/hospitality_strategy.jpg')] bg-cover bg-center opacity-0 group-hover:opacity-40 transition-opacity duration-700 scale-110 group-hover:scale-100 ease-out z-0"></div>
+                    <div class="absolute inset-0 bg-navy/95 group-hover:bg-navy/70 transition-colors duration-700 z-0"></div>
                     
-                    <!-- Left: Consultant -->
-                    <div class="flex flex-col items-center px-4 scroll-reveal reveal-hidden">
-                        <h3 class="text-gold font-display font-bold text-2xl md:text-3xl tracking-widest uppercase mb-6">Consultant</h3>
-                        <p class="text-text-main text-xs md:text-sm font-sans tracking-widest leading-loose uppercase text-center max-w-xs">
+                    <div class="relative z-10 transform group-hover:-translate-y-4 transition-transform duration-500 text-center">
+                        <h3 class="text-gold font-display font-bold text-3xl md:text-4xl tracking-widest uppercase mb-8 group-hover:scale-110 transition-transform duration-500 drop-shadow-lg">
+                            Consultant
+                        </h3>
+                        <p class="text-white text-sm md:text-base font-sans tracking-widest leading-loose uppercase max-w-sm mx-auto opacity-80 group-hover:opacity-100 transition-opacity duration-500 font-semibold drop-shadow-md">
                             Ayudando a bares, marcas y empresas de hospitality a desarrollar conceptos, estrategias, barras y experiencias con sentido.
                         </p>
                     </div>
+                </div>
 
-                    <!-- Center: Coach Mentor -->
-                    <div class="flex flex-col items-center px-4 relative scroll-reveal reveal-hidden reveal-delay-100">
-                        <!-- Vertical Separators (Desktop only) -->
-                        <div class="hidden md:block absolute left-0 top-0 bottom-0 w-1 bg-gold h-full"></div>
-                        <div class="hidden md:block absolute right-0 top-0 bottom-0 w-1 bg-gold h-full"></div>
-                        
-                        <h3 class="text-gold font-display font-bold text-2xl md:text-3xl tracking-widest uppercase mb-6 flex flex-col gap-1">
+                <!-- Center: Coach Mentor -->
+                <div class="group relative px-8 py-24 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-border-gold overflow-hidden cursor-pointer scroll-reveal reveal-hidden reveal-delay-100 min-h-[400px]">
+                    <!-- Hover Background Image -->
+                    <div class="absolute inset-0 bg-[url('/coach_mentor.jpg')] bg-cover bg-center opacity-0 group-hover:opacity-40 transition-opacity duration-700 scale-110 group-hover:scale-100 ease-out z-0"></div>
+                    <div class="absolute inset-0 bg-navy/95 group-hover:bg-navy/70 transition-colors duration-700 z-0"></div>
+                    
+                    <div class="relative z-10 transform group-hover:-translate-y-4 transition-transform duration-500 text-center">
+                        <h3 class="text-gold font-display font-bold text-3xl md:text-4xl tracking-widest uppercase mb-8 group-hover:scale-110 transition-transform duration-500 drop-shadow-lg flex flex-col gap-2">
                             <span>Coach</span>
                             <span>Mentor</span>
                         </h3>
-                        <p class="text-text-main text-xs md:text-sm font-sans tracking-widest leading-loose uppercase text-center max-w-xs">
+                        <p class="text-white text-sm md:text-base font-sans tracking-widest leading-loose uppercase max-w-sm mx-auto opacity-80 group-hover:opacity-100 transition-opacity duration-500 font-semibold drop-shadow-md">
                             Acompañando a profesionales y líderes en su desarrollo, propósito y liderazgo.
                         </p>
                     </div>
+                </div>
 
-                    <!-- Right: Speaker -->
-                    <div class="flex flex-col items-center px-4 scroll-reveal reveal-hidden reveal-delay-200">
-                        <h3 class="text-gold font-display font-bold text-2xl md:text-3xl tracking-widest uppercase mb-6">Speaker</h3>
-                        <p class="text-text-main text-xs md:text-sm font-sans tracking-widest leading-loose uppercase text-center max-w-xs">
+                <!-- Right: Speaker -->
+                <div class="group relative px-8 py-24 flex flex-col items-center justify-center overflow-hidden cursor-pointer scroll-reveal reveal-hidden reveal-delay-200 min-h-[400px]">
+                    <!-- Hover Background Image -->
+                    <div class="absolute inset-0 bg-[url('/bartender_passion.jpg')] bg-cover bg-center opacity-0 group-hover:opacity-40 transition-opacity duration-700 scale-110 group-hover:scale-100 ease-out z-0"></div>
+                    <div class="absolute inset-0 bg-navy/95 group-hover:bg-navy/70 transition-colors duration-700 z-0"></div>
+                    
+                    <div class="relative z-10 transform group-hover:-translate-y-4 transition-transform duration-500 text-center">
+                        <h3 class="text-gold font-display font-bold text-3xl md:text-4xl tracking-widest uppercase mb-8 group-hover:scale-110 transition-transform duration-500 drop-shadow-lg">
+                            Speaker
+                        </h3>
+                        <p class="text-white text-sm md:text-base font-sans tracking-widest leading-loose uppercase max-w-sm mx-auto opacity-80 group-hover:opacity-100 transition-opacity duration-500 font-semibold drop-shadow-md">
                             Compartiendo historias, conocimiento y una visión de la hospitality construida desde la experiencia y la curiosidad.
                         </p>
                     </div>
-
                 </div>
+
             </div>
         </section>
 

@@ -34,14 +34,41 @@ import Footer from '../components/Footer.astro';
                 </a>
             </div>
             
-            <!-- Carousel placeholder at bottom of hero -->
-            <div class="absolute bottom-0 left-0 w-full bg-surface border-t border-border-gold py-4 overflow-hidden z-20">
-                <div class="flex gap-12 whitespace-nowrap animate-pulse opacity-70 items-center justify-center">
-                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Four Roses</span>
-                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Havana Club</span>
-                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Beefeater</span>
-                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Absolut</span>
-                    <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Tatel Group</span>
+            <!-- Infinite Marquee Logos -->
+            <div class="absolute bottom-0 left-0 w-full bg-surface border-t border-border-gold py-4 overflow-hidden z-20 flex">
+                <div class="flex whitespace-nowrap animate-marquee opacity-70 hover:opacity-100 transition-opacity">
+                    <!-- Set 1 -->
+                    <div class="flex gap-16 px-8 items-center">
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Four Roses</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Havana Club</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Beefeater</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Absolut</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Tatel Group</span>
+                    </div>
+                    <!-- Set 2 -->
+                    <div class="flex gap-16 px-8 items-center">
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Four Roses</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Havana Club</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Beefeater</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Absolut</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Tatel Group</span>
+                    </div>
+                    <!-- Set 3 -->
+                    <div class="flex gap-16 px-8 items-center">
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Four Roses</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Havana Club</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Beefeater</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Absolut</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Tatel Group</span>
+                    </div>
+                    <!-- Set 4 -->
+                    <div class="flex gap-16 px-8 items-center">
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Four Roses</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Havana Club</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Beefeater</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Absolut</span>
+                        <span class="text-text-main font-bold uppercase tracking-widest hover:text-gold transition-colors">Tatel Group</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -470,6 +497,19 @@ import Footer from '../components/Footer.astro';
             opacity: 0;
             transform: scale(1);
         }
+    }
+
+    /* Marquee Animation */
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+        animation: marquee 25s linear infinite;
+        width: max-content;
+    }
+    .animate-marquee:hover {
+        animation-play-state: paused;
     }
 </style>
 

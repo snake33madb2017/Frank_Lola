@@ -53,14 +53,20 @@ import Footer from '../components/Footer.astro';
         <!-- Banner 3 Photos Top -->
         <section class="py-10 bg-navy">
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 px-6">
-                <div class="aspect-square bg-[url('/xfm-frank-lola-01-1.jpg')] bg-cover bg-center border border-border-gold flex items-center justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden">
-                    <span class="text-gold uppercase tracking-widest font-bold bg-navy/80 px-4 py-2 backdrop-blur-sm">Foto 1 Placeholder</span>
+                <div class="group aspect-square bg-[url('/bartender_passion.jpg')] bg-cover bg-center border border-border-gold flex items-end justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden">
+                    <div class="w-full bg-navy/90 backdrop-blur-sm p-4 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-gold uppercase tracking-widest font-bold text-sm block">Bartender by Passion</span>
+                    </div>
                 </div>
-                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden reveal-delay-100">
-                    <span class="text-gold uppercase tracking-widest font-bold">Foto 2 Placeholder</span>
+                <div class="group aspect-square bg-[url('/coach_mentor.jpg')] bg-cover bg-center border border-border-gold flex items-end justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden reveal-delay-100">
+                    <div class="w-full bg-navy/90 backdrop-blur-sm p-4 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-gold uppercase tracking-widest font-bold text-sm block">Coach & Mentor by Purpose</span>
+                    </div>
                 </div>
-                <div class="aspect-square bg-surface border border-border-gold flex items-center justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden reveal-delay-200">
-                    <span class="text-gold uppercase tracking-widest font-bold">Foto 3 Placeholder</span>
+                <div class="group aspect-square bg-[url('/hospitality_strategy.jpg')] bg-cover bg-center border border-border-gold flex items-end justify-center opacity-80 hover:opacity-100 hover:scale-[1.02] transition-all duration-500 cursor-pointer scroll-reveal reveal-hidden reveal-delay-200">
+                    <div class="w-full bg-navy/90 backdrop-blur-sm p-4 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <span class="text-gold uppercase tracking-widest font-bold text-sm block">Strategist by Experience</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -92,33 +98,39 @@ import Footer from '../components/Footer.astro';
         </section>
 
         <!-- Placeholder for TH-Blog -->
-        <section id="blog" class="py-32 px-6 bg-navy relative border-t border-border-gold">
-            <div class="max-w-7xl mx-auto text-center scroll-reveal reveal-hidden">
-                <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Blog</h2>
-                <p class="text-gold font-bold uppercase tracking-widest mb-8">Artículos y reflexiones</p>
-                <div class="h-64 bg-surface border border-border-gold flex items-center justify-center opacity-70">
+        <section id="blog" class="py-32 px-6 relative border-t border-border-gold bg-[url('/blog_bg.jpg')] bg-fixed bg-cover bg-center">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-navy/80 mix-blend-multiply z-0"></div>
+            <div class="max-w-7xl mx-auto text-center relative z-10 scroll-reveal reveal-hidden">
+                <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase drop-shadow-md">Blog</h2>
+                <p class="text-gold font-bold uppercase tracking-widest mb-8 drop-shadow-md">Artículos y reflexiones</p>
+                <div class="h-64 bg-surface/50 backdrop-blur-md border border-border-gold flex items-center justify-center opacity-90">
                     <span class="text-text-main uppercase tracking-widest">Contenido del Blog (Próximamente)</span>
                 </div>
             </div>
         </section>
 
         <!-- Placeholder for Videos -->
-        <section id="videos" class="py-32 px-6 bg-navy relative border-t border-border-gold">
-            <div class="max-w-7xl mx-auto text-center scroll-reveal reveal-hidden">
-                <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Videos</h2>
-                <p class="text-gold font-bold uppercase tracking-widest mb-8">Canal de YouTube</p>
-                <div class="h-64 bg-surface border border-border-gold flex items-center justify-center opacity-70">
+        <section id="videos" class="py-32 px-6 relative border-t border-border-gold bg-[url('/videos_bg.jpg')] bg-fixed bg-cover bg-center">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-navy/80 mix-blend-multiply z-0"></div>
+            <div class="max-w-7xl mx-auto text-center relative z-10 scroll-reveal reveal-hidden">
+                <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase drop-shadow-md">Videos</h2>
+                <p class="text-gold font-bold uppercase tracking-widest mb-8 drop-shadow-md">Canal de YouTube</p>
+                <div class="h-64 bg-surface/50 backdrop-blur-md border border-border-gold flex items-center justify-center opacity-90">
                     <span class="text-text-main uppercase tracking-widest">Contenido de Videos (Próximamente)</span>
                 </div>
             </div>
         </section>
 
         <!-- Placeholder for Bar(o)Grama -->
-        <section id="barograma" class="py-32 px-6 bg-navy relative border-t border-border-gold">
-            <div class="max-w-7xl mx-auto text-center scroll-reveal reveal-hidden">
-                <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Bar(O)Grama</h2>
-                <p class="text-gold font-bold uppercase tracking-widest mb-8">Consultoría</p>
-                <div class="h-64 bg-surface border border-border-gold flex items-center justify-center opacity-70">
+        <section id="barograma" class="py-32 px-6 relative border-t border-border-gold bg-[url('/barograma_bg.jpg')] bg-fixed bg-cover bg-center">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-navy/80 mix-blend-multiply z-0"></div>
+            <div class="max-w-7xl mx-auto text-center relative z-10 scroll-reveal reveal-hidden">
+                <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase drop-shadow-md">Bar(O)Grama</h2>
+                <p class="text-gold font-bold uppercase tracking-widest mb-8 drop-shadow-md">Consultoría</p>
+                <div class="h-64 bg-surface/50 backdrop-blur-md border border-border-gold flex items-center justify-center opacity-90">
                     <span class="text-text-main uppercase tracking-widest">Contenido de Bar(O)Grama (Próximamente)</span>
                 </div>
             </div>

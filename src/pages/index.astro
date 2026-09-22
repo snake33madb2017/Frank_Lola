@@ -8,7 +8,14 @@ import Footer from '../components/Footer.astro';
     <Header />
     <main>
         <!-- Hero Section -->
-        <section id="home" class="relative min-h-screen pt-24 px-6 md:px-12 flex items-center justify-center overflow-hidden bg-[url('/frank-lola-scaled.jpg')] bg-fixed bg-cover bg-center">
+        <section id="home" class="relative min-h-screen pt-24 px-6 md:px-12 flex items-center justify-center overflow-hidden bg-navy">
+            <!-- Carousel Background -->
+            <div class="absolute inset-0 z-0">
+                <div class="hero-slide" style="background-image: url('/Foto%20FRANK%20LOLA%20%20BANNER%201.jpeg');"></div>
+                <div class="hero-slide" style="background-image: url('/Foto%20FRANK%20LOLA%20%20BANNER%202.jpeg');"></div>
+                <div class="hero-slide" style="background-image: url('/Foto%20FRANK%20LOLA%20%20BANNER%203.jpeg');"></div>
+            </div>
+
             <!-- Overlay -->
             <div class="absolute inset-0 bg-navy/60 mix-blend-multiply z-0"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/30 pointer-events-none z-0"></div>
@@ -399,6 +406,50 @@ import Footer from '../components/Footer.astro';
     </main>
     <Footer />
 </Layout>
+
+<style>
+    /* Hero Carousel Animations */
+    .hero-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        animation: kenburns 18s infinite ease-in-out;
+    }
+
+    .hero-slide:nth-child(1) {
+        animation-delay: 0s;
+    }
+    .hero-slide:nth-child(2) {
+        animation-delay: 6s;
+    }
+    .hero-slide:nth-child(3) {
+        animation-delay: 12s;
+    }
+
+    @keyframes kenburns {
+        0% {
+            opacity: 0;
+            transform: scale(1);
+        }
+        8.33% {
+            opacity: 1;
+        }
+        33.33% {
+            opacity: 1;
+        }
+        41.66% {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+</style>
 
 <script>
     // Intersection Observer for scroll animations

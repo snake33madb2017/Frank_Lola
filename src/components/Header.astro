@@ -4,11 +4,11 @@
     <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         
         <!-- Left: Logo / Signature -->
-        <a href="#home" class="flex-shrink-0">
+        <a href="#home" class="flex-shrink-0 relative z-50">
             <img src="/Logo frank lola.png" alt="Frank Lola" class="h-12 md:h-16 object-contain filter invert brightness-200" />
         </a>
 
-        <!-- Center: Navigation -->
+        <!-- Center: Navigation (Desktop) -->
         <nav class="hidden md:flex gap-8 text-sm font-display font-bold tracking-widest uppercase">
             <a href="#home" class="text-text-main hover:text-gold transition-colors">Inicio</a>
             <a href="#about" class="text-text-main hover:text-gold transition-colors">Sobre Mí</a>
@@ -17,7 +17,7 @@
             <a href="#barograma" class="text-text-main hover:text-gold transition-colors">Bar(O)Grama</a>
         </nav>
 
-        <!-- Right: Social and Button -->
+        <!-- Right: Social and Button (Desktop) -->
         <div class="flex items-center gap-6">
             <div class="hidden lg:flex gap-4 items-center">
                 <a href="https://www.youtube.com/@franklola4.0" target="_blank" class="text-text-main hover:text-gold transition-colors">YT</a>
@@ -27,7 +27,91 @@
             </div>
             
             <a href="#contacto" class="hidden md:inline-block bg-gold text-navy px-8 py-3 font-display font-bold uppercase tracking-widest hover:bg-white transition-colors border border-gold">Hablemos</a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 relative z-50 cursor-pointer" aria-label="Toggle Menu">
+                <span class="w-8 h-0.5 bg-gold transition-all duration-300 origin-center"></span>
+                <span class="w-8 h-0.5 bg-gold transition-all duration-300 origin-center"></span>
+                <span class="w-8 h-0.5 bg-gold transition-all duration-300 origin-center"></span>
+            </button>
         </div>
 
     </div>
 </header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-navy/95 backdrop-blur-xl z-40 opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col justify-center items-center">
+    <nav class="flex flex-col gap-8 text-center text-3xl font-display font-black tracking-widest uppercase">
+        <a href="#home" class="mobile-link text-white hover:text-gold transition-colors translate-y-8 opacity-0">Inicio</a>
+        <a href="#about" class="mobile-link text-white hover:text-gold transition-colors translate-y-8 opacity-0">Sobre Mí</a>
+        <a href="#blog" class="mobile-link text-white hover:text-gold transition-colors translate-y-8 opacity-0">Blog</a>
+        <a href="#videos" class="mobile-link text-white hover:text-gold transition-colors translate-y-8 opacity-0">Videos</a>
+        <a href="#barograma" class="mobile-link text-white hover:text-gold transition-colors translate-y-8 opacity-0">Bar(O)Grama</a>
+    </nav>
+    <div class="mt-16 flex gap-6 mobile-link translate-y-8 opacity-0">
+        <a href="https://www.youtube.com/@franklola4.0" target="_blank" class="text-gold hover:text-white transition-colors font-bold tracking-widest">YT</a>
+        <a href="https://www.instagram.com/franklolalovo" target="_blank" class="text-gold hover:text-white transition-colors font-bold tracking-widest">IG</a>
+        <a href="https://www.linkedin.com/in/franklola" target="_blank" class="text-gold hover:text-white transition-colors font-bold tracking-widest">IN</a>
+        <a href="https://www.tiktok.com/@franklola_" target="_blank" class="text-gold hover:text-white transition-colors font-bold tracking-widest">TK</a>
+    </div>
+</div>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const links = document.querySelectorAll('.mobile-link');
+    const spans = btn.querySelectorAll('span');
+    let isOpen = false;
+
+    function toggleMenu() {
+        isOpen = !isOpen;
+        
+        // Toggle menu visibility
+        if (isOpen) {
+            menu.classList.remove('opacity-0', 'pointer-events-none');
+            menu.classList.add('opacity-100', 'pointer-events-auto');
+            document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+            
+            // Animación en cascada para los enlaces
+            links.forEach((link, i) => {
+                setTimeout(() => {
+                    link.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                    link.classList.remove('translate-y-8', 'opacity-0');
+                    link.classList.add('translate-y-0', 'opacity-100');
+                }, 100 + (i * 100));
+            });
+
+            // Animación del icono hamburguesa a una "X"
+            spans[0].style.transform = 'translateY(8px) rotate(45deg)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+        } else {
+            menu.classList.remove('opacity-100', 'pointer-events-auto');
+            menu.classList.add('opacity-0', 'pointer-events-none');
+            document.body.style.overflow = '';
+            
+            // Reset de los enlaces
+            links.forEach((link) => {
+                link.style.transition = 'none';
+                link.classList.remove('translate-y-0', 'opacity-100');
+                link.classList.add('translate-y-8', 'opacity-0');
+            });
+
+            // Reset del icono hamburguesa
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    }
+
+    btn.addEventListener('click', toggleMenu);
+    
+    // Cerrar menú automáticamente al hacer click en un enlace
+    links.forEach(link => {
+        if(link.tagName === 'A' || link.parentElement.classList.contains('mobile-link')) {
+            link.addEventListener('click', () => {
+                if(isOpen) toggleMenu();
+            });
+        }
+    });
+</script>

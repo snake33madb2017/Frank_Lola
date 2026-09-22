@@ -8,7 +8,7 @@ import Footer from '../components/Footer.astro';
     <Header />
     <main>
         <!-- Hero Section -->
-        <section class="relative min-h-screen pt-24 px-6 md:px-12 flex items-center justify-center bg-navy overflow-hidden">
+        <section id="home" class="relative min-h-screen pt-24 px-6 md:px-12 flex items-center justify-center bg-navy overflow-hidden">
             <!-- Background Image -->
             <div class="absolute inset-0 z-0">
                 <img src="/foto1-placeholder.jpg" alt="Frank Lola Speaking" class="w-full h-full object-cover opacity-50 mix-blend-overlay" />
@@ -27,7 +27,7 @@ import Footer from '../components/Footer.astro';
                     "Creo profundamente que la hospitalidad no es un privilegio, sino una necesidad global. Esta creencia guía cómo vivo y alimenta mi búsqueda de la verdadera hospitalidad. Estoy agradecido por cada momento de mi vida, bueno y malo, porque me han convertido en quien soy hoy. Mientras esté aquí, quiero mostrarle al mundo cómo una verdadera hospitalidad puede erradicar la hostilidad."
                 </p>
 
-                <a href="/about" class="bg-transparent border-2 border-gold text-gold px-10 py-4 rounded-full font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-all inline-block">
+                <a href="#about" class="bg-transparent border-2 border-gold text-gold px-10 py-4 rounded-full font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-all inline-block">
                     Saber Más
                 </a>
             </div>
@@ -44,19 +44,14 @@ import Footer from '../components/Footer.astro';
             </div>
         </section>
 
-        <!-- Frank Lola Section (About Short) -->
-        <section class="py-32 px-6 bg-navy relative">
+        <!-- Frank Lola Section (About) -->
+        <section id="about" class="py-32 px-6 bg-navy relative">
             <div class="max-w-7xl mx-auto text-center">
                 <h2 class="text-5xl md:text-7xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Frank Lola</h2>
                 <h3 class="text-gold font-bold uppercase tracking-widest mb-8">Consultor. Speaker. Coach.</h3>
                 <p class="text-text-main/80 text-xl font-light max-w-3xl mx-auto leading-relaxed">
                     Acompaño a directivos y equipos en la transformación del liderazgo y la experiencia de servicio. Fundador de <strong>Bar(o)Grama</strong> y <strong>Truly Hospitality</strong>, cofundador de <strong>Lovo Bar</strong> y <strong>The Flow Bros</strong>. Coaching ejecutivo (EMCC/ICF) con visión de primera línea.
                 </p>
-                <div class="mt-12">
-                     <a href="/about" class="bg-transparent border border-gold text-text-main px-8 py-3 rounded-full font-display font-bold uppercase tracking-widest hover:bg-gold hover:text-navy transition-colors">
-                        Saber Más &gt;
-                    </a>
-                </div>
             </div>
         </section>
 
@@ -100,6 +95,40 @@ import Footer from '../components/Footer.astro';
                 </div>
             </div>
         </section>
+
+        <!-- Placeholder for TH-Blog -->
+        <section id="blog" class="py-32 px-6 bg-navy relative border-t border-border-gold">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Blog</h2>
+                <p class="text-gold font-bold uppercase tracking-widest mb-8">Artículos y reflexiones</p>
+                <div class="h-64 bg-surface border border-border-gold flex items-center justify-center opacity-70">
+                    <span class="text-text-main uppercase tracking-widest">Contenido del Blog (Próximamente)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholder for Videos -->
+        <section id="videos" class="py-32 px-6 bg-navy relative border-t border-border-gold">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Videos</h2>
+                <p class="text-gold font-bold uppercase tracking-widest mb-8">Canal de YouTube</p>
+                <div class="h-64 bg-surface border border-border-gold flex items-center justify-center opacity-70">
+                    <span class="text-text-main uppercase tracking-widest">Contenido de Videos (Próximamente)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholder for Bar(o)Grama -->
+        <section id="barograma" class="py-32 px-6 bg-navy relative border-t border-border-gold">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-4xl md:text-6xl font-display font-black text-text-main mb-4 tracking-tighter uppercase">Bar(O)Grama</h2>
+                <p class="text-gold font-bold uppercase tracking-widest mb-8">Consultoría</p>
+                <div class="h-64 bg-surface border border-border-gold flex items-center justify-center opacity-70">
+                    <span class="text-text-main uppercase tracking-widest">Contenido de Bar(O)Grama (Próximamente)</span>
+                </div>
+            </div>
+        </section>
+
     </main>
     <Footer />
 </Layout>

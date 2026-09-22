@@ -1,26 +1,31 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="bg-navy border-t border-border-gold py-12 mt-auto" id="contacto">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-            <h3 class="text-2xl font-serif font-bold text-text-main mb-4">Frank Lola</h3>
-            <p class="text-text-main/80 text-sm leading-relaxed max-w-sm">Bartender, Coach & Mentor certificado por EMCC e ICF. Consultor especializado en hospitality.</p>
+<footer class="bg-navy py-16 mt-auto" id="contacto">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+        <!-- Logo / Signature -->
+        <a href="#home" class="mb-8">
+            <img src="/Gemini_Generated_Image_acsbouacsbouacsb.jpeg" alt="Frank Lola Signature" class="h-24 md:h-32 object-contain mix-blend-screen filter grayscale invert brightness-200" />
+        </a>
+
+        <!-- Social Icons -->
+        <div class="flex gap-6 items-center mb-12">
+            <a href="https://www.instagram.com/franklolalovo" target="_blank" class="text-text-main hover:text-gold transition-colors font-bold text-lg">IG</a>
+            <a href="https://www.youtube.com/@franklola4.0" target="_blank" class="text-text-main hover:text-gold transition-colors font-bold text-lg">YT</a>
+            <a href="https://www.facebook.com/share/1H5fP3pBa2/?mibextid=wwXIfr" target="_blank" class="text-text-main hover:text-gold transition-colors font-bold text-lg">FB</a>
+            <a href="https://www.linkedin.com/in/franklola" target="_blank" class="text-text-main hover:text-gold transition-colors font-bold text-lg">IN</a>
+            <a href="https://www.tiktok.com/@franklola_" target="_blank" class="text-text-main hover:text-gold transition-colors font-bold text-lg">TK</a>
         </div>
-        <div>
-            <h4 class="text-text-main font-bold mb-4 uppercase tracking-wider text-sm">Navegación</h4>
-            <ul class="space-y-2 text-text-main/80 text-sm">
-                <li><a href="/" class="hover:text-gold transition-colors">Inicio</a></li>
-                <li><a href="#contacto" class="hover:text-gold transition-colors">Contacto</a></li>
-            </ul>
+
+        <!-- Copyright & Links -->
+        <div class="flex flex-col md:flex-row items-center gap-4 text-xs font-sans tracking-widest uppercase text-text-main font-bold">
+            <span>&copy; {year} FRANK LOLA. TODOS LOS DERECHOS RESERVADOS.</span>
+            <div class="hidden md:block text-gold">|</div>
+            <a href="#" class="hover:text-gold transition-colors underline decoration-gold/50 underline-offset-4">TÉRMINOS</a>
+            <div class="hidden md:block text-gold">|</div>
+            <a href="#" class="hover:text-gold transition-colors underline decoration-gold/50 underline-offset-4">PRIVACIDAD</a>
+            <div class="hidden md:block text-gold">|</div>
+            <a href="#" class="hover:text-gold transition-colors underline decoration-gold/50 underline-offset-4">DISEÑADO POR...</a>
         </div>
-        <div>
-            <h4 class="text-text-main font-bold mb-4 uppercase tracking-wider text-sm">Contacto</h4>
-            <p class="text-text-main/80 text-sm mb-4">Transforma el liderazgo, la cultura y la experiencia de servicio de tu equipo.</p>
-            <a href="mailto:hola@franklola.com" class="text-gold hover:underline font-medium">hola@franklola.com</a>
-        </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-border-gold text-center text-text-main/50 text-xs flex justify-between items-center">
-        <span>&copy; {year} Frank Lola. Todos los derechos reservados.</span>
     </div>
 </footer>

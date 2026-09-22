@@ -73,6 +73,148 @@ import Footer from '../components/Footer.astro';
             </div>
         </section>
 
+        <!-- Trayectoria / Experiencia Section -->
+        <section id="experiencia" class="py-32 px-6 bg-navy relative border-t border-border-gold overflow-hidden">
+            <!-- Decorative Background Element -->
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl opacity-30 pointer-events-none">
+                <div class="absolute top-20 left-10 w-72 h-72 bg-gold/20 rounded-full blur-[100px]"></div>
+                <div class="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full blur-[120px]"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-20 scroll-reveal reveal-hidden">
+                    <h2 class="text-5xl md:text-7xl font-display font-black text-white tracking-tighter uppercase mb-4">Trayectoria</h2>
+                    <p class="text-gold font-bold uppercase tracking-widest">Colaboraciones, Medios y Reconocimientos</p>
+                </div>
+
+                <!-- Bento Grid for Lists -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    
+                    <!-- PRENSA ESCRITA -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-gold/50 transition-all duration-500 backdrop-blur-sm group scroll-reveal reveal-hidden">
+                        <h3 class="text-gold font-display font-bold uppercase tracking-widest text-xl mb-6 border-b border-gold/30 pb-4 group-hover:pl-2 transition-all">Prensa Escrita</h3>
+                        <ul class="flex flex-col text-white/70 text-xs md:text-sm tracking-wider uppercase font-sans">
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Robb Report</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">El País</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Muy Interesante</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Vanidad</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Cuore</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">ABC</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Excelencias</li>
+                            <li class="py-2 hover:text-white hover:pl-2 transition-all">Pasión Habanos</li>
+                        </ul>
+                    </div>
+
+                    <!-- INSTITUCIONES & LOCALES -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-gold/50 transition-all duration-500 backdrop-blur-sm group scroll-reveal reveal-hidden reveal-delay-100">
+                        <h3 class="text-gold font-display font-bold uppercase tracking-widest text-xl mb-6 border-b border-gold/30 pb-4 group-hover:pl-2 transition-all">Instituciones & Locales</h3>
+                        <ul class="flex flex-col text-white/70 text-xs md:text-sm tracking-wider uppercase font-sans overflow-y-auto max-h-[400px] pr-2 custom-scrollbar">
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Hotel Palace 5*</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Tatel Group</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">La Floridita</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Lovo Bar</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Arts Club</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Create Cocktails</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Atlantic Bar</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Astor Bar & Grill</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Beefeater Distillery</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Cámara de Comercio Madrid</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Escuela Hostelería El Lago</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Hoturis</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Madrid Hospitality School</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Bar(O)Grama</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Truly Hospitality</li>
+                            <li class="py-2 hover:text-white hover:pl-2 transition-all">Flow Bros.</li>
+                        </ul>
+                    </div>
+
+                    <!-- BRAND COLABS -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-gold/50 transition-all duration-500 backdrop-blur-sm group scroll-reveal reveal-hidden reveal-delay-200 lg:col-span-1">
+                        <h3 class="text-gold font-display font-bold uppercase tracking-widest text-xl mb-6 border-b border-gold/30 pb-4 group-hover:pl-2 transition-all">Brand Colabs</h3>
+                        <ul class="flex flex-col text-white/70 text-xs md:text-sm tracking-wider uppercase font-sans overflow-y-auto max-h-[400px] pr-2 custom-scrollbar">
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Beefeater Gin</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Plymouth Gin</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Havana Club</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Hendrick's Gin</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Flor de Caña</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Martin Miller's</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Absolut Vodka</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Ketel One</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Brandy Carlos I</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Johnnie Walker</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Martini</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Latin Gin</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Chivas Brothers</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Perrier Jouët</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Four Roses</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">The Glenlivet</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Mumm Champagne</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Ballantine's</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Jameson Whisky</li>
+                            <li class="py-2 hover:text-white hover:pl-2 transition-all">Giffard</li>
+                        </ul>
+                    </div>
+
+                    <!-- EVENTOS -->
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-gold/50 transition-all duration-500 backdrop-blur-sm group scroll-reveal reveal-hidden reveal-delay-300">
+                        <h3 class="text-gold font-display font-bold uppercase tracking-widest text-xl mb-6 border-b border-gold/30 pb-4 group-hover:pl-2 transition-all">Eventos</h3>
+                        <ul class="flex flex-col text-white/70 text-xs md:text-sm tracking-wider uppercase font-sans">
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">HIP</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">EMA MTV 2010</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Madrid Fusión</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Fíbar</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Guru of Spirits</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">FEBE</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Piña Agavera</li>
+                            <li class="py-2 border-b border-white/5 hover:text-white hover:pl-2 transition-all">Belgrade Bar Show</li>
+                            <li class="py-2 hover:text-white hover:pl-2 transition-all">Mediaset</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- PREMIOS & RECONOCIMIENTOS -->
+                <div class="bg-gradient-to-br from-gold/20 to-navy border border-gold/30 rounded-3xl p-8 md:p-12 scroll-reveal reveal-hidden relative overflow-hidden group">
+                    <div class="absolute -right-10 -top-10 text-[15rem] text-gold/10 font-display font-black leading-none pointer-events-none group-hover:scale-110 transition-transform duration-700">🏆</div>
+                    
+                    <h3 class="text-gold font-display font-black uppercase tracking-widest text-2xl md:text-3xl mb-10 relative z-10 flex items-center gap-4">
+                        <span class="w-12 h-1 bg-gold"></span> Premios & Reconocimientos
+                    </h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                        <div class="flex flex-col gap-2">
+                            <span class="text-gold font-bold text-xl">2012</span>
+                            <p class="text-white/90 uppercase tracking-widest text-sm leading-relaxed">
+                                Best Brand Ambassador<br/>
+                                <span class="text-white/50 text-xs">IBAA (International Brand Ambassador Awards)</span>
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-gold font-bold text-xl">2013</span>
+                            <p class="text-white/90 uppercase tracking-widest text-sm leading-relaxed">
+                                Cantinero de Honor<br/>
+                                <span class="text-white/50 text-xs">Asociación de Cantineros de Cuba</span>
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-gold font-bold text-xl">2013</span>
+                            <p class="text-white/90 uppercase tracking-widest text-sm leading-relaxed">
+                                Absolut Bartender Pro<br/>
+                                <span class="text-white/50 text-xs">Absolut Akademi</span>
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="text-gold font-bold text-xl">2015</span>
+                            <p class="text-white/90 uppercase tracking-widest text-sm leading-relaxed">
+                                Miembro Honorable<br/>
+                                <span class="text-white/50 text-xs">Gin Guild (Por la aportación al mundo del Gin)</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Frank Lola Section (About) -->
         <section id="about" class="py-32 px-6 bg-navy relative border-t border-border-gold overflow-hidden">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">

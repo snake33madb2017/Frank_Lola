@@ -6,6 +6,9 @@ interface Props {
 }
 
 const { title = "Frank Lola | Hospitality Consultant & Coach" } = Astro.props;
+
+// Cambia a 'false' para desactivar el modo mantenimiento
+const isMaintenanceMode = true;
 ---
 
 <!DOCTYPE html>
@@ -20,6 +23,22 @@ const { title = "Frank Lola | Hospitality Consultant & Coach" } = Astro.props;
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body class="bg-navy text-text-main font-sans antialiased flex flex-col min-h-screen selection:bg-gold selection:text-navy">
-    <slot />
+    {isMaintenanceMode ? (
+        <main class="flex flex-col items-center justify-center min-h-screen bg-navy text-center p-6">
+            <h1 class="text-4xl md:text-6xl font-heading font-black text-gold tracking-tight mb-6 uppercase">
+                En Mantenimiento
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mb-8 font-light leading-relaxed">
+                Estamos trabajando en algunas mejoras y actualizaciones en nuestra web. 
+                Volveremos a estar operativos muy pronto. ¡Gracias por tu paciencia!
+            </p>
+            <div class="w-16 h-1 bg-gold rounded-full mb-8"></div>
+            <p class="text-sm text-gray-500 font-light tracking-widest uppercase">
+                &copy; {new Date().getFullYear()} Frank Lola
+            </p>
+        </main>
+    ) : (
+        <slot />
+    )}
 </body>
 </html>

@@ -404,7 +404,7 @@ import Footer from '../components/Footer.astro';
                 <h2 class="text-5xl md:text-8xl font-display font-black text-gold tracking-tighter uppercase mb-16 drop-shadow-xl">
                     Mi Propósito
                 </h2>
-                <p class="text-white text-2xl md:text-4xl font-display font-bold tracking-widest leading-tight uppercase mb-12 drop-shadow-md">
+                <p id="texto-whatsapp" class="text-white text-2xl md:text-4xl font-display font-bold tracking-widest leading-tight uppercase mb-12 drop-shadow-md">
                     Erradicar la hostilidad a través de la hospitalidad honesta.
                 </p>
                 <p class="text-white/80 md:text-xl font-sans tracking-widest leading-relaxed uppercase max-w-3xl mx-auto border-t border-gold/30 pt-8">
@@ -676,4 +676,46 @@ import Footer from '../components/Footer.astro';
 
     const hiddenElements = document.querySelectorAll('.reveal-hidden');
     hiddenElements.forEach((el) => observer.observe(el));
+</script>
+
+<script>
+    import { createClient } from '@supabase/supabase-js';
+
+    // Nos conectamos a Supabase usando tus variables
+    const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+    const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+    
+    if (supabaseUrl && supabaseKey) {
+        const supabase = createClient(supabaseUrl, supabaseKey);
+        
+        // Buscamos el elemento exacto que ya tiene tu diseño
+        const messageElement = document.getElementById('texto-whatsapp');
+        
+        // Si existe en la página, nos suscribimos a los cambios
+        if (messageElement) {
+            // 1. Traer el último mensaje al cargar la página
+            supabase
+                .from('contenido_web')
+                .select('mensaje')
+                .order('created_at', { ascending: false })
+                .limit(1)
+                .single()
+                .then(({ data }) => {
+                    if (data) messageElement.textContent = data.mensaje;
+                }).catch(err => console.error(err));
+                
+            // 2. Escuchar la magia en Tiempo Real
+            supabase
+                .channel('public:contenido_web')
+                .on(
+                    'postgres_changes',
+                    { event: 'INSERT', schema: 'public', table: 'contenido_web' },
+                    (payload) => {
+                        // Reemplazamos el texto sin romper el diseño
+                        messageElement.textContent = payload.new.mensaje;
+                    }
+                )
+                .subscribe();
+        }
+    }
 </script>
